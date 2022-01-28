@@ -35,9 +35,7 @@ require_once 'classes/Subject.php';
             JOIN adresse_schueler AP ON A.id = AP.a_id
             JOIN schule.schueler S ON S.id = AP.s_id
             WHERE S.deleted_at is NULL and A.deleted_at is null and AP.deleted_at is null";
-    echo $sql;
     $result = query($sql);
-    print_r($result);
     $row = '<tr> <td>###DELETEACTION###</td><td>###ID###</td><td>###FNAME###</td><td>###LNAME###</td><td>###POSTLEIZAHL###</td><td>###STADT###</td>
                  <td>###STRASSE###</td><td>###HAUSNUMMER###</td></tr>';
     foreach ($result as $dataRow) {
