@@ -21,8 +21,8 @@ class Pupil
      * @param string $name
      * @return void
      */
-    public function __create($name){
+    public function __create($name)
+    {
         $this->firstname = $name;
     }
-
 }
