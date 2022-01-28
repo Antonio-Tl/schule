@@ -41,19 +41,21 @@ function getOverviewTable()
         $output .= '<th>Kurs</th>';
     $output .= '</tr>';
 
-    $sql = "SELECT * from schule.kurse WHERE deleted_at is NULL";
+    $sql = "SELECT * from schule.kurse K, schule.faecher F WHERE deleted_at is NULL";
     $result = query($sql);
-    $row = '<tr> <td>###DELETEACTION###</td><td>###ID###</td><td>###NAME###</td></tr>';
+    $row = '<tr> <td>###DELETEACTION###</td><td>###ID###</td><td>###FACH###</td><td>###KURS###</td></tr>';
     foreach ($result as $dataRow) {
         $output.= str_replace(
             array(
                 '###DELETEACTION###',
                 '###ID###',
-                '###NAME###',),
+                '###FACH###',
+                '###KURS###',),
             array(
                 '<A href="ActionDeleteL.php?id='.$dataRow['id'].'">[X]</A>',
                 $dataRow['id'],
                 '<a href="?kursId='.$dataRow['id'].'">'.$dataRow['name'].'</a>',
+                $dataRow['fach'],
             ),
             $row
         );
