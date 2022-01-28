@@ -24,6 +24,7 @@ require_once 'classes/Subject.php';
         <th>Vorname</th>
         <th>Nachname</th>
         <th>Kurse zuordnen</th>
+        <th>Adresse zuordnen</th>
     </tr>
     <?php
     $sql = "SELECT * from schule.schueler WHERE deleted_at is NULL";
