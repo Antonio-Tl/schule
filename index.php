@@ -11,6 +11,8 @@ echo '<a href="listS.php">Liste aller Schueler</a>';
 echo '</br>';
 echo '<a href="listA.php">Liste mit Adresse der Schueler</a>';
 echo '</br>';
+echo '<a href="formularA.php">Adresse eintragen</a>';
+echo '</br>';
 echo '<a href="listL.php">Liste aller Lehrer</a>';
 echo '</br>';
 echo '<a href="listC.php">Liste aller Kurse</a>';
@@ -20,6 +22,7 @@ echo '</br>';
 echo '<a href="formularL.php">Lehrer eintragen</a>';
 
 
+
 $address = new Address();
 
 $pupil = new Pupil('Arlind');
@@ -27,7 +30,6 @@ $pupil->setAddress($address);
 
 $pupil->myAddress->city = 'Ludwigshafen';
 $pupil->myAddress->street = 'keine Ahnung Allee';
-
 
 
 // print_r($pupil);
