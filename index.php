@@ -11,9 +11,12 @@ echo '<a href="listS.php">Liste aller Schueler</a>';
 echo '</br>';
 echo '<a href="listL.php">Liste aller Lehrer</a>';
 echo '</br>';
+echo '<a href="listC.php">Liste aller Kurse</a>';
+echo '</br>';
 echo '<a href="formularS.php">Schüler eintragen</a>';
 echo '</br>';
 echo '<a href="formularL.php">Lehrer eintragen</a>';
+
 
 $address = new Address();
 
