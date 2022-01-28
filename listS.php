@@ -28,7 +28,8 @@ require_once 'classes/Subject.php';
     <?php
     $sql = "SELECT * from schule.schueler WHERE deleted_at is NULL";
     $result = query($sql);
-    $row = '<tr> <td>###DELETEACTION###</td><td>###ID###</td><td>###FNAME###</td><td>###LNAME###</td><td><A Href="skz.php?id=###ID###">Kurse zuordnen</A></td></tr>';
+    $row = '<tr> <td>###DELETEACTION###</td><td>###ID###</td><td>###FNAME###</td><td>###LNAME###</td>
+            <td><A Href="skz.php?id=###ID###">Kurse zuordnen</A></td><td><A Href="saz.php?id=###ID###">Adresse</A></td></tr>';
     foreach ($result as $dataRow) {
         echo str_replace(
             array(
