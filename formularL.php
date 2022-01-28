@@ -19,6 +19,7 @@
     <button type="submit">Send your message</button>
 
 </form>
+
 <button onclick="window.location.href='/schule/index.php'">Zurueck</button>
 </body>
 </html>

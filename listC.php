@@ -80,7 +80,7 @@ function getCourseTable($courseId)
     $output .= '</tr>';
 
     query('use schule');
-    $sql = "SELECT CONCAT(KS.k_id,'-',KS.s_id) as id, S.fname, S.lname, KS.note from schule.kurse K JOIN kurse_schueler KS ON K.id=KS.k_id ";
+    $sql = "SELECT CONCAT(KS.k_id,'-',KS.s_id) as id, S.fname, S.lname, KS.note from schule.kurse K  JOIN kurse_schueler KS ON K.id=KS.k_id ";
     $sql .="JOIN schueler s on KS.s_id = s.id WHERE S.deleted_at is NULL and K.deleted_at is null and KS.deleted_at is null";
 
     $result = query($sql);
