@@ -9,6 +9,8 @@ require_once 'classes/Subject.php';
 
 echo '<a href="listS.php">Liste aller Schueler</a>';
 echo '</br>';
+echo '<a href="listA.php">Liste mit Adresse der Schueler</a>';
+echo '</br>';
 echo '<a href="listL.php">Liste aller Lehrer</a>';
 echo '</br>';
 echo '<a href="listC.php">Liste aller Kurse</a>';
