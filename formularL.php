@@ -8,11 +8,11 @@
     <ul>
         <li>
             <label for="f2">Vorname:</label>
-            <input type="text" id="f2" name="fnameL">
+            <input type="text" id="f2" name="fname">
         </li>
         <li>
             <label for="f3">Nachname:</label>
-            <input type="text" id="f3" name="lnameL">
+            <input type="text" id="f3" name="lname">
         </li>
     </ul>
 

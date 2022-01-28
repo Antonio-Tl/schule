@@ -1,8 +1,8 @@
 <?php
 require_once 'database.php';
 
-$sql = 'INSERT INTO schule.lehrer ( fnameL , lnameL ) 
-        VALUES ("' . $_POST['fnameL'] . '", "' . $_POST['lnameL'] . '")';
+$sql = 'INSERT INTO schule.lehrer ( fname , lname ) 
+        VALUES ("' . $_POST['fname'] . '", "' . $_POST['lname'] . '")';
 query($sql);
 
 header('Location: index.php');
