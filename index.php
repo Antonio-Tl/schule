@@ -5,7 +5,14 @@ require_once 'classes/Course.php';
 require_once 'classes/Pupil.php';
 require_once 'classes/Subject.php';
 
-
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+}
+echo $ip;
 
 echo '<a href="listS.php">Liste aller Schueler</a>';
 echo '</br>';
@@ -23,19 +30,17 @@ echo '<a href="formularL.php">Lehrer eintragen</a>';
 
 
 
-$address = new Address();
+$sql = "select * from schule.schueler";
+$test = query($sql);
+foreach($test as $key => $x){
 
-$pupil = new Pupil('Arlind');
-$pupil->setAddress($address);
+    echo "das aktuelle ding im sack test wird erkannt am schlüssel $key </br>";
+    foreach($x as $spalte => $feld){
+        echo "$spalte : $feld </br>";
+    }
 
-$pupil->myAddress->city = 'Ludwigshafen';
-$pupil->myAddress->street = 'keine Ahnung Allee';
+
+}
 
 
-// print_r($pupil);
-
-// terminal - index.php ausführen - oder im browser aufrufen
-
-// cd schule
-// C:\xampp\php\php.exe index.php !!!
-// Die Konsole zeigt euch jetzt das Objekt (Kuchen) Arlid - und darin den kuchen (Adresse)
+print_r($_SERVER);
